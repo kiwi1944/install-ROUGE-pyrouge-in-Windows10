@@ -1,8 +1,8 @@
-# 配置过程
+# ROUGE（python3）配置过程
 
 ## 0.写在前面
 
-我在使用 pyrouge 时为了配置相关环境费了很大的功夫，网上与此相关的内容很少，我也是检索了 stackoverflow 、CSDN 以及各种博客上的资料才最终配置成功，所以对自己的配置过程做了以下记录。如果想了解更多关于 ROUGE 的内容，可以参考 Kavita Ganesan 老师的主页（ https://kavita-ganesan.com ），我主要参考了以下两篇文章的内容：
+我在使用 pyrouge 时为了配置相关环境费了很大的功夫，网上与此相关的内容很少，我也是检索了 stackoverflow 、CSDN 以及各种博客上的资料才最终配置成功，所以对自己的配置过程做了以下记录。如果想了解更多关于 ROUGE 的内容，可以参考 Kavita Ganesan 老师的主页（ https://kavita-ganesan.com/ ），我主要参考了以下两篇文章的内容：
 
 https://kavita-ganesan.com/what-is-rouge-and-how-it-works-for-evaluation-of-summaries/#.XrVKxSC-uQI
 
@@ -64,15 +64,17 @@ https://github.com/andersjo/pyrouge/tree/master/tools/ROUGE-1.5.5
 ### 方法1
 在系统C盘建立文件夹 ROUGE，直接将步骤3中下载的内容（名为 ROUGE-1.5.5 的文件夹）放入其中即可。
 
-### 方法2
-首先，在系统任意位置放置步骤3中下载的内容（名为 ROUGE-1.5.5 的文件夹），比如放置在 C:\pyrouge-master\tools 文件夹下。
+如果在后续使用中发生错误，请尝试方法2。
 
-然后，找到一个名为 pyrouge_set_rouge_path 的文件（没有后缀），一般在 python 安装路径的 Scripts 文件夹内，比如在 C:\Anaconda\envs\py35\Scripts 内。
+### 方法2
+首先，在系统任意位置放置步骤3中下载的内容（名为 ROUGE-1.5.5 的文件夹），比如放置在 D:\pyrouge-master\tools 文件夹下。
+
+然后，找到一个名为 pyrouge_set_rouge_path 的文件（没有后缀），一般在 python 安装路径的 Scripts 文件夹内，比如在 D:\Program_Files\Anaconda3\Scripts 内。
 
 最后，打开 powershell，运行以下命令：
 
 ```
-python C:\Anaconda\envs\py35\Scripts\pyrouge_set_rouge_path  C:\pyrouge-master\tools\ROUGE-1.5.5
+python D:\Program_Files\Anaconda3\Scripts\pyrouge_set_rouge_path  D:\pyrouge-master\tools\ROUGE-1.5.5
 ```
 ## 5.进行前半部分内容的测试
 
@@ -106,13 +108,13 @@ cpan XML::DOM
 
 打开步骤4中放置的 ROUGE-1.5.5 文件夹，在其中的 data 文件夹内找到 WordNet-2.0.exc.db 文件，并删除。
 
-然后在此文件夹内，不要选中任何文件或文件夹，按住shift键的同时点击鼠标右键，再点击“在此处打开 powershell 窗口”。打开后输入以下命令（可能会因为阅读界面被用了两行或以上显示，直接复制即可，只有一行，只有一句命令）：
+然后在此文件夹内，不要选中任何文件或文件夹，按住 shift 键的同时点击鼠标右键，再点击“在此处打开 powershell 窗口”。打开后输入以下命令（可能会因为阅读界面被用了两行或以上显示，直接复制即可，只有一行，只有一句命令）：
 
 ```
 perl WordNet-2.0-Exceptions/buildExeptionDB.pl ./WordNet-2.0-Exceptions ./smart_common_words.txt ./WordNet-2.0.exc.db
 ```
 
-之后会发现原来的地方又生成了一个 WordNet-2.0.exc.db 文件。
+之后会发现原来的地方重新生成了一个 WordNet-2.0.exc.db 文件。
 
 ## 9.修改 pyrouge 包中的内容
 
