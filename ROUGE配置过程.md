@@ -1,4 +1,4 @@
-# ROUGE（python3）配置过程
+# ROUGE 配置过程
 
 ## 0.写在前面
 
