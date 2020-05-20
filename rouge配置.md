@@ -31,10 +31,15 @@ https://pypi.org/project/py-rouge/
 ## 1.所用平台、构架等：
 
 1.win10
+
 2.python3.7（anaconda）
+
 3.jupyter notebook
+
 4.strawberry-perl-5.30.2.1-32bit
+
 5.ROUGE-1.5.5
+
 
 ## 2.安装 pyrouge 包
 
