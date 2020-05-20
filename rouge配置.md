@@ -2,7 +2,7 @@
 
 ## 0.写在前面
 
-我在使用 pyrouge 时为了配置相关环境费了很大的功夫，网上与此相关的内容很少，我也是检索了 stackoverflow 、CSDN 以及各种博客上的资料才最终配置成功，所以对自己的配置过程做了以下记录。如果想了解更多关于 ROUGE 的内容，可以参考 Kavita Ganesan 老师的主页（https://kavita-ganesan.com/），我主要参考了以下两篇文章的内容：
+我在使用 pyrouge 时为了配置相关环境费了很大的功夫，网上与此相关的内容很少，我也是检索了 stackoverflow 、CSDN 以及各种博客上的资料才最终配置成功，所以对自己的配置过程做了以下记录。如果想了解更多关于 ROUGE 的内容，可以参考 Kavita Ganesan 老师的主页（ https://kavita-ganesan.com ），我主要参考了以下两篇文章的内容：
 
 https://kavita-ganesan.com/what-is-rouge-and-how-it-works-for-evaluation-of-summaries/#.XrVKxSC-uQI
 
